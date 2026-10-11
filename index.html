@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+</head>
+<style>
+    /* CSS 3D Flip Card Styles */
+    .perspective-1000 {
+        perspective: 1000px;
+    }
+    .transform-style-3d {
+        transform-style: preserve-3d;
+    }
+    .backface-hidden {
+        backface-visibility: hidden;
+    }
+    .rotate-y-180 {
+        transform: rotateY(180deg);
+    }
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Josua G. Ramones | Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            500: '#0284c7',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-sky-500 selection:text-white">
+
+    <!-- Top Navigation Header -->
+<header class="fixed top-0 left-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+        
+        <!-- Logo / Brand Title -->
+        <a href="#" class="text-lg font-bold text-white hover:text-sky-400 transition flex items-center gap-1">
+            <span class="tracking-tight">Resume Portfolio Website<span class="text-sky-400"></span></span>
+        </a>
+
+        <!-- Desktop Navigation Buttons -->
+        <nav class="hidden md:flex items-center gap-1 bg-slate-800/50 p-1.5 rounded-full border border-slate-800">
+            <a href="#about" class="px-4 py-1.5 text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-700/60 rounded-full transition">
+                About
+            </a>
+            <a href="#skills" class="px-4 py-1.5 text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-700/60 rounded-full transition">
+                Skills
+            </a>
+            <a href="#projects" class="px-4 py-1.5 text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-700/60 rounded-full transition">
+                Projects
+            </a>
+            <a href="#certificates" class="px-4 py-1.5 text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-700/60 rounded-full transition">
+                Certificates
+            </a>
+            <a href="#education" class="px-4 py-1.5 text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-700/60 rounded-full transition">
+                Education
+            </a>
+            <a href="#contact" class="px-4 py-1.5 text-xs font-semibold text-white bg-sky-600 hover:bg-sky-500 rounded-full transition shadow-md shadow-sky-600/20">
+                Contact
+            </a>
+        </nav>
+
+    </div>
+</header>
+
+    <!-- Hero / Main Section -->
+    <section id="about" class="pt-32 pb-20 px-4 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+        <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-sky-500/30 shadow-2xl flex-shrink-0">
+            <img src="profile.jpg" alt="John Josua Ramones" class="w-full h-full object-cover">
+        </div>
+        <div class="space-y-6 text-center md:text-left">
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">John Josua G. Ramones</h1>
+            <p class="text-lg text-slate-400 max-w-2x2 leading-relaxed">
+                Welcome! Glad you’re here. I am an aspiring Network Security and Web Developer passionate about building robust network infrastructures and intuitive digital solutions. Take a look around to check out my latest projects, technical skills, and certifications..
+            </p>
+        
+               <!-- Added flex-wrap and gap-3 for proper spacing between buttons -->
+<div class="flex flex-wrap justify-center md:justify-start gap-3 pt-2">
+    <!-- Download Resume Button -->
+    <a href="docs/resume.pdf" download="John_Josua_Ramones_Resume.pdf" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-lg text-sm font-semibold border border-slate-700 flex items-center gap-2 transition">
+        <i class="fa-solid fa-file-arrow-down"></i> Download Resume
+    </a>
+
+    <!-- GitHub -->
+    <a href="https://github.com/johnjoshua23" target="_blank" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg text-sm font-semibold border border-slate-700 flex items-center gap-2 transition">
+        <i class="fa-brands fa-github text-base"></i> GitHub
+    </a>
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/joshjoshjosh.23" target="_blank" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg text-sm font-semibold border border-slate-700 flex items-center gap-2 transition">
+        <i class="fa-brands fa-facebook text-base"></i> Facebook
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/josh_shyko/" target="_blank" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg text-sm font-semibold border border-slate-700 flex items-center gap-2 transition">
+        <i class="fa-brands fa-instagram text-base"></i> Instagram
+    </a>
+</div>
+            </div>
+        </div>
+    </section>
+<!-- Career Objectives & Areas of Interest in IT (Compact & Centered) -->
+<div class="max-w-6xl mx-auto my-8 px-4">
+    <div class="grid md:grid-cols-2 gap-6">
+
+        <!-- Card 1: Career Objectives -->
+        <div class="bg-slate-900/90 p-6 rounded-xl border border-slate-800 space-y-4 hover:border-sky-500/50 transition shadow-lg flex flex-col justify-between">
+            <div class="space-y-3">
+                <div class="flex items-center gap-3 border-b border-slate-800/80 pb-3">
+                    <div class="w-10 h-10 rounded-lg bg-sky-500/10 text-sky-400 flex items-center justify-center text-lg font-bold border border-sky-500/20">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white">Career Objectives</h3>
+                        <p class="text-[11px] text-sky-400 font-medium">Professional Vision</p>
+                    </div>
+                </div>
+                
+                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                    To leverage my technical background in network administration, cybersecurity operations, and full-stack web development to design, implement, and maintain secure, efficient, and scalable digital infrastructure within a dynamic technology environment.
+                </p>
+            </div>
+        </div>
+
+        <!-- Card 2: Areas of Interest in IT -->
+        <div class="bg-slate-900/90 p-6 rounded-xl border border-slate-800 space-y-4 hover:border-sky-500/50 transition shadow-lg flex flex-col justify-between">
+            <div class="space-y-3">
+                <div class="flex items-center gap-3 border-b border-slate-800/80 pb-3">
+                    <div class="w-10 h-10 rounded-lg bg-sky-500/10 text-sky-400 flex items-center justify-center text-lg font-bold border border-sky-500/20">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white">Areas of Interest in IT</h3>
+                        <p class="text-[11px] text-sky-400 font-medium">Core Focus Areas</p>
+                    </div>
+                </div>
+
+                <!-- Compact Badges -->
+                <div class="flex flex-wrap gap-2 pt-1">
+                    <span class="px-3 py-1.5 bg-slate-800/60 text-sky-400 text-xs font-medium rounded-lg border border-slate-700/80 flex items-center gap-2">
+                        <i class="fa-solid fa-shield-halved text-sky-400"></i> Network Security
+                    </span>
+                    <span class="px-3 py-1.5 bg-slate-800/60 text-sky-400 text-xs font-medium rounded-lg border border-slate-700/80 flex items-center gap-2">
+                        <i class="fa-solid fa-code text-sky-400"></i> Web Development
+                    </span>
+                    <span class="px-3 py-1.5 bg-slate-800/60 text-sky-400 text-xs font-medium rounded-lg border border-slate-700/80 flex items-center gap-2">
+                        <i class="fa-solid fa-pen-nib text-sky-400"></i> UI/UX Interface Design
+                    </span>
+                    <span class="px-3 py-1.5 bg-slate-800/60 text-sky-400 text-xs font-medium rounded-lg border border-slate-700/80 flex items-center gap-2">
+                        <i class="fa-solid fa-gears text-sky-400"></i> System Automation
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+    
+   
+
+                
+             <!-- Technical & Professional Skills Section -->
+<section id="skills" class="py-20 w-full bg-slate-900/50 border-y border-slate-800">
+    <div class="max-w-6xl mx-auto px-6 sm:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-3xl font-bold text-white tracking-tight">Technical & Professional Skills</h2>
+           
+        </div>
+
+        <!-- 2-Column Responsive Grid -->
+        <div class="grid lg:grid-cols-2 gap-8 items-stretch">
+
+            <!-- Technical Skills Card -->
+            <div class="bg-slate-900/90 p-8 rounded-2xl border border-slate-800 space-y-6 hover:border-sky-500/50 transition duration-300 shadow-xl flex flex-col justify-between">
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+                        <div class="w-10 h-10 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center text-lg font-bold border border-sky-500/20">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Technical Skills</h3>
+                            <p class="text-xs text-sky-400 font-medium">Core Hard Skills</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <!-- Networking -->
+                        <div class="p-4 bg-slate-800/40 rounded-xl border border-slate-800/80 flex flex-col items-center text-center space-y-2 hover:border-sky-500/30 transition">
+                            <i class="fa-solid fa-network-wired text-sky-400 text-2xl mb-1"></i>
+                            <div class="font-semibold text-sm text-white">Networking</div>
+                            <span class="px-2.5 py-0.5 bg-sky-500/10 text-sky-400 text-[11px] font-semibold rounded-full border border-sky-500/20">Advanced</span>
+                        </div>
+
+                        <!-- HTML / CSS -->
+                        <div class="p-4 bg-slate-800/40 rounded-xl border border-slate-800/80 flex flex-col items-center text-center space-y-2 hover:border-sky-500/30 transition">
+                            <i class="fa-brands fa-html5 text-sky-400 text-2xl mb-1"></i>
+                            <div class="font-semibold text-sm text-white">HTML / CSS</div>
+                            <span class="px-2.5 py-0.5 bg-sky-500/10 text-sky-400 text-[11px] font-semibold rounded-full border border-sky-500/20">Advanced</span>
+                        </div>
+
+                        <!-- UI/UX Design -->
+                        <div class="p-4 bg-slate-800/40 rounded-xl border border-slate-800/80 flex flex-col items-center text-center space-y-2 hover:border-sky-500/30 transition">
+                            <i class="fa-solid fa-pen-nib text-sky-400 text-2xl mb-1"></i>
+                            <div class="font-semibold text-sm text-white">UI/UX Design</div>
+                            <span class="px-2.5 py-0.5 bg-slate-800 text-slate-400 text-[11px] font-semibold rounded-full border border-slate-700">Intermediate</span>
+                        </div>
+
+                        <!-- Cybersecurity -->
+                        <div class="p-4 bg-slate-800/40 rounded-xl border border-slate-800/80 flex flex-col items-center text-center space-y-2 hover:border-sky-500/30 transition">
+                            <i class="fa-solid fa-shield-halved text-sky-400 text-2xl mb-1"></i>
+                            <div class="font-semibold text-sm text-white">Cybersecurity</div>
+                            <span class="px-2.5 py-0.5 bg-slate-800 text-slate-400 text-[11px] font-semibold rounded-full border border-slate-700">Intermediate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Skills Card -->
+            <div class="bg-slate-900/90 p-8 rounded-2xl border border-slate-800 space-y-6 hover:border-sky-500/50 transition duration-300 shadow-xl flex flex-col justify-between">
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+                        <div class="w-10 h-10 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center text-lg font-bold border border-sky-500/20">
+                            <i class="fa-solid fa-user-gear"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Professional Skills</h3>
+                            <p class="text-xs text-sky-400 font-medium">Soft Skills & Leadership</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <!-- Communication -->
+                        <div class="p-4 bg-slate-800/40 rounded-xl border border-slate-800/80 flex flex-col items-center text-center space-y-2 hover:border-sky-500/30 transition">
+                            <i class="fa-solid fa-comments text-sky-400 text-2xl mb-1"></i>
+                            <div class="font-semibold text-sm text-white">Communication</div>
+                            <span class="px-2.5 py-0.5 bg-sky-500/10 text-sky-400 text-[11px] font-semibold rounded-full border border-sky-500/20">Advanced</span>
+                        </div>
+
+                        <!-- Leadership -->
+                        <div class="p-4 bg-slate-800/40 rounded-xl border border-slate-800/80 flex flex-col items-center text-center space-y-2 hover:border-sky-500/30 transition">
+                            <i class="fa-solid fa-user-group text-sky-400 text-2xl mb-1"></i>
+                            <div class="font-semibold text-sm text-white">Leadership</div>
+                            <span class="px-2.5 py-0.5 bg-sky-500/10 text-sky-400 text-[11px] font-semibold rounded-full border border-sky-500/20">Advanced</span>
+                        </div>
+
+                        <!-- Teamwork -->
+                        <div class="p-4 bg-slate-800/40 rounded-xl border border-slate-800/80 flex flex-col items-center text-center space-y-2 hover:border-sky-500/30 transition">
+                            <i class="fa-solid fa-handshake text-sky-400 text-2xl mb-1"></i>
+                            <div class="font-semibold text-sm text-white">Teamwork</div>
+                            <span class="px-2.5 py-0.5 bg-sky-500/10 text-sky-400 text-[11px] font-semibold rounded-full border border-sky-500/20">Advanced</span>
+                        </div>
+
+                        <!-- Problem Solving -->
+                        <div class="p-4 bg-slate-800/40 rounded-xl border border-slate-800/80 flex flex-col items-center text-center space-y-2 hover:border-sky-500/30 transition">
+                            <i class="fa-solid fa-brain text-sky-400 text-2xl mb-1"></i>
+                            <div class="font-semibold text-sm text-white">Problem Solving</div>
+                            <span class="px-2.5 py-0.5 bg-sky-500/10 text-sky-400 text-[11px] font-semibold rounded-full border border-sky-500/20">Advanced</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+    </section>
+
+  <!-- Featured Capstone Project Section -->
+<section id="projects" class="py-20 max-w-6xl mx-auto px-6 sm:px-8">
+    <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Featured Project</h2>
+        <p class="text-slate-400 text-sm mt-2">Academic Capstone Project & Software Systems</p>
+    </div>
+
+    <div class="bg-slate-800/40 rounded-2xl border border-slate-800 overflow-hidden grid lg:grid-cols-2 gap-8 p-8 shadow-xl">
+        
+        <!-- Left Column: Project Overview -->
+        <div class="space-y-5 flex flex-col justify-between">
+            <div class="space-y-3">
+                <div class="flex items-center gap-2">
+                    <span class="px-3 py-1 bg-sky-500/10 text-sky-400 text-xs font-semibold rounded-full border border-sky-500/20 uppercase tracking-wider">
+                        Capstone Project
+                    </span>
+                </div>
+                <h3 class="text-2xl font-bold text-white">
+                    PDAOLink: A Web Application and Automated Authentication for Person with Disability Registration
+                </h3>
+                <p class="text-slate-300 text-sm leading-relaxed">
+                    A comprehensive digital platform engineered to streamline, digitize, and automate Person with Disability (PWD) record management and authentication processes for local municipal offices.
+                </p>
+            </div>
+
+            <!-- Role & Tag Badges -->
+            <div class="space-y-3 pt-2">
+                <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Project Roles</div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-slate-900 text-sky-400 text-xs font-medium rounded-md border border-slate-700">Programmer</span>
+                    <span class="px-3 py-1 bg-slate-900 text-sky-400 text-xs font-medium rounded-md border border-slate-700">UI/UX Designer</span>
+                </div>
+            </div>
+            <!-- Added "View Project" Link Button -->
+<div class="pt-4 border-t border-slate-800/80 flex flex-wrap gap-3">
+    <a href="https://pdaolink.onrender.com/" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-sky-600 hover:bg-sky-500 text-white text-xs font-semibold rounded-lg transition inline-flex items-center gap-2 shadow-lg shadow-sky-600/20">
+        <i class="fa-solid fa-arrow-up-right-from-square"></i> View Live System
+    </a>
+</div>
+        </div>
+
+        <!-- Right Column: Screenshot Gallery Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
+            
+            <!-- Screenshot 1 -->
+            <a href="page1.png" target="_blank" class="group relative rounded-xl overflow-hidden border border-slate-700/60 bg-slate-900 shadow-md h-52 block">
+                <img src="page1.png" alt="PDAOLink Interface Screenshot 1" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-xs font-semibold text-white gap-1">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i> View Full Image
+                </div>
+            </a>
+
+            <!-- Screenshot 2 -->
+            <a href="page2.png" target="_blank" class="group relative rounded-xl overflow-hidden border border-slate-700/60 bg-slate-900 shadow-md h-52 block">
+                <img src="page2.png" alt="PDAOLink Interface Screenshot 2" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-xs font-semibold text-white gap-1">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i> View Full Image
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+</section>
+            </div>
+        </div>
+    </section>
+
+   <!-- Certifications & Seminars Section -->
+<section id="certificates" class="py-20 bg-slate-800/50 border-y border-slate-800">
+    <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-white mb-12 text-center">Certifications & Seminars</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Cert 1: IT Specialist Networking -->
+            <div class="bg-slate-900 rounded-xl border border-slate-800 overflow-hidden flex flex-col justify-between hover:border-sky-500/50 transition">
+                <div class="h-44 bg-slate-950 overflow-hidden border-b border-slate-800">
+                    <img src="cert-networking.png" alt="Networking Specialist Certificate" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-5 space-y-2 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="text-xs text-sky-400 font-semibold mb-1">Pearson VUE / IT Specialist</div>
+                        <h4 class="font-bold text-white text-base">Networking Specialist</h4>
+                        <p class="text-xs text-slate-400 mt-2">Issued: Dec 08, 2025 | Code: LXes-s4Ah</p>
+                    </div>
+                    <a href="cert-networking.png" target="_blank" class="pt-3 text-xs font-semibold text-sky-400 hover:text-sky-300 inline-flex items-center gap-1">
+                        View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Cert 2: TESDA Cybersecurity -->
+            <div class="bg-slate-900 rounded-xl border border-slate-800 overflow-hidden flex flex-col justify-between hover:border-sky-500/50 transition">
+                <div class="h-44 bg-slate-950 overflow-hidden border-b border-slate-800">
+                    <img src="cert-tesda.jpg" alt="TESDA Microsoft Cybersecurity Certificate" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-5 space-y-2 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="text-xs text-sky-400 font-semibold mb-1">TESDA Online Program</div>
+                        <h4 class="font-bold text-white text-base">Microsoft Cybersecurity Fundamentals</h4>
+                        <p class="text-xs text-slate-400 mt-2">Issued: Sept 03, 2026 | Code: CiQ5L4OCqZ</p>
+                    </div>
+                    <a href="cert-tesda.jpg" target="_blank" class="pt-3 text-xs font-semibold text-sky-400 hover:text-sky-300 inline-flex items-center gap-1">
+                        View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Cert 3: OpenLearn GICAST -->
+            <div class="bg-slate-900 rounded-xl border border-slate-800 overflow-hidden flex flex-col justify-between hover:border-sky-500/50 transition">
+                <div class="h-44 bg-slate-950 overflow-hidden border-b border-slate-800">
+                    <img src="cert-openlearn.jpg" alt="GICAST Statement of Participation" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-5 space-y-2 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="text-xs text-sky-400 font-semibold mb-1">The Open University</div>
+                        <h4 class="font-bold text-white text-base">GICAST: Cyber Aptitude & Skills</h4>
+                        <p class="text-xs text-slate-400 mt-2">Issued: May 20, 2025 | Code: CYBER_B2</p>
+                    </div>
+                    <a href="cert-openlearn.jpg" target="_blank" class="pt-3 text-xs font-semibold text-sky-400 hover:text-sky-300 inline-flex items-center gap-1">
+                        View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Cert 4: Cloud Security Alliance -->
+            <div class="bg-slate-900 rounded-xl border border-slate-800 overflow-hidden flex flex-col justify-between hover:border-sky-500/50 transition">
+                <div class="h-44 bg-slate-950 overflow-hidden border-b border-slate-800">
+                    <img src="cert-csa.png" alt="CSA AI Security Summit Certificate" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-5 space-y-2 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="text-xs text-sky-400 font-semibold mb-1">Cloud Security Alliance</div>
+                        <h4 class="font-bold text-white text-base">AI Security Summit 2026: CxO Trust</h4>
+                        <p class="text-xs text-slate-400 mt-2">Earned: Aug 19, 2026</p>
+                    </div>
+                    <a href="cert-csa.png" target="_blank" class="pt-3 text-xs font-semibold text-sky-400 hover:text-sky-300 inline-flex items-center gap-1">
+                        View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Cert 5: ISABELA DigiWORK EXPO -->
+            <div class="bg-slate-900 rounded-xl border border-slate-800 overflow-hidden flex flex-col justify-between hover:border-sky-500/50 transition">
+                <div class="h-44 bg-slate-950 overflow-hidden border-b border-slate-800">
+                    <img src="cert-digiwork.png" alt="ISABELA DigiWORK Certificate" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-5 space-y-2 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="text-xs text-sky-400 font-semibold mb-1">ISABELA DigiWORK EXPO</div>
+                        <h4 class="font-bold text-white text-base">Digital Careers & Workforce Competitiveness</h4>
+                        <p class="text-xs text-slate-400 mt-2">Earned: Aug 19, 2026</p>
+                    </div>
+                    <a href="cert-digiwork.png" target="_blank" class="pt-3 text-xs font-semibold text-sky-400 hover:text-sky-300 inline-flex items-center gap-1">
+                        View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Cert 6: DICT Region V -->
+            <div class="bg-slate-900 rounded-xl border border-slate-800 overflow-hidden flex flex-col justify-between hover:border-sky-500/50 transition">
+                <div class="h-44 bg-slate-950 overflow-hidden border-b border-slate-800">
+                    <img src="cert-dict.png" alt="DICT Webinar Certificate" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-5 space-y-2 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="text-xs text-sky-400 font-semibold mb-1">DICT Region V</div>
+                        <h4 class="font-bold text-white text-base">Don't Get Hacked: Detect, Defend, & Secure</h4>
+                        <p class="text-xs text-slate-400 mt-2">Earned: Aug 13, 2026</p>
+                    </div>
+                    <a href="cert-dict.png" target="_blank" class="pt-3 text-xs font-semibold text-sky-400 hover:text-sky-300 inline-flex items-center gap-1">
+                        View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+      <!-- Educational Background Section with Flip Cards -->
+<section id="education" class="py-20 w-full bg-slate-900/50 border-y border-slate-800">
+    <div class="max-w-6xl mx-auto px-6 sm:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Educational Background</h2>
+            <p class="text-slate-400 text-sm mt-2">Click any card to flip and view the campus photo</p>
+        </div>
+
+        <!-- 3-Column Education Flip Cards Container -->
+        <div class="grid md:grid-cols-3 gap-6">
+
+            <!-- 1. Tertiary Education Flip Card -->
+            <div class="h-64 perspective-1000 cursor-pointer" onclick="this.querySelector('.flip-card-inner').classList.toggle('rotate-y-180')">
+                <div class="flip-card-inner relative w-full h-full duration-500 transform-style-3d transition-transform">
+                    
+                    <!-- Front Side -->
+                    <div class="absolute inset-0 w-full h-full bg-slate-900/90 p-6 rounded-2xl border border-slate-800 backface-hidden flex flex-col justify-between shadow-xl">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="px-2.5 py-1 bg-sky-500/10 text-sky-400 text-[11px] font-semibold rounded-full border border-sky-500/20">
+                                    2023 – Present
+                                </span>
+                                <i class="fa-solid fa-graduation-cap text-sky-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white">Isabela State University</h3>
+                                <p class="text-xs text-slate-400 font-medium">Cauayan City Campus</p>
+                            </div>
+                            <div class="pt-2 border-t border-slate-800/80">
+                                <p class="text-sm font-semibold text-slate-200">BS in Information Technology</p>
+                                <p class="text-xs text-sky-400 mt-1">Specialization: Network Security</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between text-[11px] text-slate-500">
+                            <span>Tertiary Level</span>
+                            <span class="text-sky-400 font-medium"><i class="fa-solid fa-rotate"></i> Click to flip</span>
+                        </div>
+                    </div>
+
+                    <!-- Back Side (Photo) -->
+                    <div class="absolute inset-0 w-full h-full bg-slate-900 rounded-2xl border border-sky-500/50 overflow-hidden backface-hidden rotate-y-180 shadow-xl">
+                        <img src="isu-cauayan.png" alt="Isabela State University Campus" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent p-4 flex flex-col justify-end">
+                            <span class="text-white text-xs font-bold">Isabela State University</span>
+                            <span class="text-slate-300 text-[10px]">Cauayan City Campus</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 2. Secondary Education Flip Card -->
+            <div class="h-64 perspective-1000 cursor-pointer" onclick="this.querySelector('.flip-card-inner').classList.toggle('rotate-y-180')">
+                <div class="flip-card-inner relative w-full h-full duration-500 transform-style-3d transition-transform">
+                    
+                    <!-- Front Side -->
+                    <div class="absolute inset-0 w-full h-full bg-slate-900/90 p-6 rounded-2xl border border-slate-800 backface-hidden flex flex-col justify-between shadow-xl">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="px-2.5 py-1 bg-slate-800 text-slate-400 text-[11px] font-semibold rounded-full border border-slate-700">
+                                    Graduated 2023
+                                </span>
+                                <i class="fa-solid fa-school text-slate-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white">Luna National High School</h3>
+                                <p class="text-xs text-slate-400 font-medium">Secondary Education</p>
+                            </div>
+                            <div class="pt-2 border-t border-slate-800/80">
+                                <p class="text-sm font-semibold text-slate-200">High School Diploma</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between text-[11px] text-slate-500">
+                            <span>Secondary Level</span>
+                            <span class="text-sky-400 font-medium"><i class="fa-solid fa-rotate"></i> Click to flip</span>
+                        </div>
+                    </div>
+
+                    <!-- Back Side (Photo) -->
+                    <div class="absolute inset-0 w-full h-full bg-slate-900 rounded-2xl border border-sky-500/50 overflow-hidden backface-hidden rotate-y-180 shadow-xl">
+                        <img src="luna-nhs.png" alt="Luna National High School" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent p-4 flex flex-col justify-end">
+                            <span class="text-white text-xs font-bold">Luna National High School</span>
+                            <span class="text-slate-300 text-[10px]">Luna, Isabela</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 3. Elementary Education Flip Card (Luna Central School) -->
+            <div class="h-64 perspective-1000 cursor-pointer" onclick="this.querySelector('.flip-card-inner').classList.toggle('rotate-y-180')">
+                <div class="flip-card-inner relative w-full h-full duration-500 transform-style-3d transition-transform">
+                    
+                    <!-- Front Side -->
+                    <div class="absolute inset-0 w-full h-full bg-slate-900/90 p-6 rounded-2xl border border-slate-800 backface-hidden flex flex-col justify-between shadow-xl">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="px-2.5 py-1 bg-slate-800 text-slate-400 text-[11px] font-semibold rounded-full border border-slate-700">
+                                    Graduated 2017
+                                </span>
+                                <i class="fa-solid fa-book-open text-slate-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white">Luna Central School</h3>
+                                <p class="text-xs text-slate-400 font-medium">Primary Education</p>
+                            </div>
+                            <div class="pt-2 border-t border-slate-800/80">
+                                <p class="text-sm font-semibold text-slate-200">Elementary Diploma</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between text-[11px] text-slate-500">
+                            <span>Primary Level</span>
+                            <span class="text-sky-400 font-medium"><i class="fa-solid fa-rotate"></i> Click to flip</span>
+                        </div>
+                    </div>
+
+                    <!-- Back Side (Photo of Luna Central School) -->
+                    <div class="absolute inset-0 w-full h-full bg-slate-900 rounded-2xl border border-sky-500/50 overflow-hidden backface-hidden rotate-y-180 shadow-xl">
+                        <img src="luna-central-school.png" alt="Luna Central School" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent p-4 flex flex-col justify-end">
+                            <span class="text-white text-xs font-bold">Luna Central School</span>
+                            <span class="text-slate-300 text-[10px]">Luna, Isabela</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+        </div>
+    </div>
+</section>
+</section>
+    
+
+   <!-- Contact Section (Email, Address, Phone, Instagram & Formspree Form) -->
+<section id="contact" class="py-20 bg-slate-800/50 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-white mb-12 text-center">Contact Now</h2>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+
+            <!-- Column 1: Contact Details & Socials -->
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 space-y-6 flex flex-col justify-between">
+                <div class="space-y-4">
+                    <h3 class="text-xl font-semibold text-sky-400">Contact Information</h3>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        Feel free to reach out via email, phone, or drop a direct message on Instagram.
+                    </p>
+
+                    <div class="space-y-3 pt-2">
+                        <!-- Email -->
+                        <div class="p-4 bg-slate-800/50 rounded-lg border border-slate-800 flex items-center gap-4 hover:border-sky-500/50 transition">
+                            <div class="w-10 h-10 rounded-lg bg-sky-500/10 text-sky-400 flex items-center justify-center text-lg flex-shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="overflow-hidden">
+                                <div class="text-xs text-slate-400 font-medium">Email Address</div>
+                                <div class="text-sm text-white font-semibold truncate">ramonesjohnjosua@gmail.com</div>
+                            </div>
+                        </div>
+
+                        <!-- Phone Number -->
+                        <div class="p-4 bg-slate-800/50 rounded-lg border border-slate-800 flex items-center gap-4 hover:border-sky-500/50 transition">
+                            <div class="w-10 h-10 rounded-lg bg-sky-500/10 text-sky-400 flex items-center justify-center text-lg flex-shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="overflow-hidden">
+                                <div class="text-xs text-slate-400 font-medium">Contact Number</div>
+                                <div class="text-sm text-white font-semibold truncate">+63 997 296 2203</div>
+                            </div>
+                        </div>
+
+                        <!-- Address -->
+                        <div class="p-4 bg-slate-800/50 rounded-lg border border-slate-800 flex items-center gap-4 hover:border-sky-500/50 transition">
+                            <div class="w-10 h-10 rounded-lg bg-sky-500/10 text-sky-400 flex items-center justify-center text-lg flex-shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="overflow-hidden">
+                                <div class="text-xs text-slate-400 font-medium">Location</div>
+                                <div class="text-sm text-white font-semibold truncate">Centro 2, Luna, Isabela, Philippines</div>
+                            </div>
+                        </div>
+
+                    
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 2: Formspree Contact Form -->
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 space-y-6">
+                <h3 class="text-xl font-semibold text-sky-400">Send a Message</h3>
+                <form action="https://formspree.io/f/xqpebyzb" method="POST" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 uppercase mb-2">Your Name</label>
+                        <input type="text" name="name" class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-2.5 text-white text-sm focus:outline-none focus:border-sky-500 transition" placeholder="John Doe" required>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 uppercase mb-2">Your Email</label>
+                        <input type="email" name="email" class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-2.5 text-white text-sm focus:outline-none focus:border-sky-500 transition" placeholder="name@example.com" required>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 uppercase mb-2">Message</label>
+                        <textarea name="message" rows="4" class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-2.5 text-white text-sm focus:outline-none focus:border-sky-500 transition resize-none" placeholder="Write your message here..." required></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3 bg-sky-600 hover:bg-sky-500 text-white text-sm font-semibold rounded-lg transition shadow-lg shadow-sky-600/20">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+        </div>
+    </div>
+</section>
+</body>
+</html>
